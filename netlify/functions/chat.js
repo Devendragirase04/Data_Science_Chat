@@ -49,7 +49,7 @@ Formatting rules (strictly follow):
     if (!response.ok) {
       return {
         statusCode: response.status,
-        body: JSON.stringify({ error: data.error?.message || 'Gemini API Error' })
+        body: JSON.stringify({ error: data.error?.message || 'AI Processing Error' })
       };
     }
 
