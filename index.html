@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8"/>
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<title>DataScience By Dev — Data Science Expert Tutor</title>
-<meta name="description" content="Ask anything about Data Science, Machine Learning, Python, SQL and Statistics. Get instant expert AI answers for free."/>
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>DataScience By Dev — Data Science Expert Tutor</title>
+  <meta name="description" content="Ask anything about Data Science, Machine Learning, Python, SQL and Statistics. Get instant expert AI answers for free."/>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800;900&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
@@ -37,7 +37,7 @@
     </button>
   </div>
 
-  <button class="new-chat-btn" onclick="newChat()">
+  <button class="new-chat-btn" id="newChatBtn" onclick="newChat()">
     <svg width="13" height="13" viewBox="0 0 24 24" fill="none"><path d="M12 5v14M5 12h14" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
     New Conversation
   </button>
@@ -53,10 +53,10 @@
       </div>
       <div class="cat-items" id="cat-ml">
         <button class="topic-btn" onclick="setTopic('Explain supervised vs unsupervised learning with real-world examples and Python code')">Supervised vs Unsupervised</button>
-        <button class="topic-btn" onclick="setTopic('What is overfitting and underfitting? Show prevention techniques with scikit-learn')">Overfitting & Underfitting</button>
+        <button class="topic-btn" onclick="setTopic('What is overfitting and underfitting? Show prevention techniques with scikit-learn')">Overfitting &amp; Underfitting</button>
         <button class="topic-btn" onclick="setTopic('Explain all gradient descent variants: SGD, Adam, RMSprop with code')">Gradient Descent</button>
-        <button class="topic-btn" onclick="setTopic('How do decision trees and random forests work? Python implementation')">Decision Trees & Random Forest</button>
-        <button class="topic-btn" onclick="setTopic('Explain SVM and the kernel trick with a Python example')">SVM & Kernels</button>
+        <button class="topic-btn" onclick="setTopic('How do decision trees and random forests work? Python implementation')">Decision Trees &amp; Random Forest</button>
+        <button class="topic-btn" onclick="setTopic('Explain SVM and the kernel trick with a Python example')">SVM &amp; Kernels</button>
         <button class="topic-btn" onclick="setTopic('What is cross-validation? Show k-fold cross validation in Python')">Cross Validation</button>
       </div>
     </div>
@@ -70,8 +70,8 @@
       <div class="cat-items" id="cat-dl">
         <button class="topic-btn" onclick="setTopic('How do neural networks work? Explain forward and backpropagation with Python code')">Neural Networks</button>
         <button class="topic-btn" onclick="setTopic('Build a CNN for image classification using PyTorch with full code example')">CNNs with PyTorch</button>
-        <button class="topic-btn" onclick="setTopic('Explain the Transformer architecture and self-attention mechanism in detail')">Transformers & Attention</button>
-        <button class="topic-btn" onclick="setTopic('How do LSTMs and GRUs work? Show sequence prediction example')">LSTMs & RNNs</button>
+        <button class="topic-btn" onclick="setTopic('Explain the Transformer architecture and self-attention mechanism in detail')">Transformers &amp; Attention</button>
+        <button class="topic-btn" onclick="setTopic('How do LSTMs and GRUs work? Show sequence prediction example')">LSTMs &amp; RNNs</button>
         <button class="topic-btn" onclick="setTopic('Explain transfer learning and fine-tuning with a practical example')">Transfer Learning</button>
       </div>
     </div>
@@ -79,13 +79,13 @@
     <!-- Python -->
     <div class="topic-category">
       <div class="cat-header" onclick="toggleCat('py')">
-        <span>🐍 Python & Libraries</span>
+        <span>🐍 Python &amp; Libraries</span>
         <svg class="cat-arrow" id="arr-py" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
       <div class="cat-items" id="cat-py">
         <button class="topic-btn" onclick="setTopic('Pandas advanced: groupby, merge, pivot_table, apply with real examples')">Pandas Advanced</button>
         <button class="topic-btn" onclick="setTopic('NumPy broadcasting, vectorization, and array manipulation tricks')">NumPy Tricks</button>
-        <button class="topic-btn" onclick="setTopic('Best data visualization practices with matplotlib and seaborn with code')">Matplotlib & Seaborn</button>
+        <button class="topic-btn" onclick="setTopic('Best data visualization practices with matplotlib and seaborn with code')">Matplotlib &amp; Seaborn</button>
         <button class="topic-btn" onclick="setTopic('Scikit-learn pipelines, ColumnTransformer, and model selection with GridSearchCV')">Sklearn Pipelines</button>
         <button class="topic-btn" onclick="setTopic('How to handle missing data, outliers, and data cleaning in pandas?')">Data Cleaning</button>
       </div>
@@ -94,7 +94,7 @@
     <!-- Stats -->
     <div class="topic-category">
       <div class="cat-header" onclick="toggleCat('stats')">
-        <span>📊 Stats & Math</span>
+        <span>📊 Stats &amp; Math</span>
         <svg class="cat-arrow" id="arr-stats" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
       <div class="cat-items" id="cat-stats">
@@ -108,13 +108,77 @@
     <!-- SQL -->
     <div class="topic-category">
       <div class="cat-header" onclick="toggleCat('sql')">
-        <span>🗄️ SQL & Data Eng</span>
+        <span>🗄️ SQL &amp; Data Eng</span>
         <svg class="cat-arrow" id="arr-sql" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
       </div>
       <div class="cat-items" id="cat-sql">
         <button class="topic-btn" onclick="setTopic('Explain all SQL JOIN types with detailed data science examples')">SQL JOINs</button>
         <button class="topic-btn" onclick="setTopic('SQL window functions: ROW_NUMBER, RANK, LAG, LEAD with examples')">Window Functions</button>
         <button class="topic-btn" onclick="setTopic('What are data pipelines and ETL? Show a Python ETL pipeline example')">ETL Pipelines</button>
+      </div>
+    </div>
+
+    <!-- Power BI -->
+    <div class="topic-category">
+      <div class="cat-header" onclick="toggleCat('pbi')">
+        <span>📊 Power BI</span>
+        <svg class="cat-arrow" id="arr-pbi" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cat-items" id="cat-pbi">
+        <button class="topic-btn" onclick="setTopic('How to build an interactive Power BI dashboard from scratch? Step-by-step guide')">Building Dashboards</button>
+        <button class="topic-btn" onclick="setTopic('Explain DAX formulas in Power BI: CALCULATE, SUMX, FILTER with examples')">DAX Formulas</button>
+        <button class="topic-btn" onclick="setTopic('How to use Power Query in Power BI for data transformation and cleaning?')">Power Query</button>
+        <button class="topic-btn" onclick="setTopic('Explain Power BI data modeling: relationships, star schema, and best practices')">Data Modeling</button>
+        <button class="topic-btn" onclick="setTopic('What are slicers, filters, and drill-through in Power BI? Show examples')">Slicers &amp; Filters</button>
+        <button class="topic-btn" onclick="setTopic('How to connect Power BI to SQL, Excel, and APIs? Full integration guide')">Data Sources</button>
+      </div>
+    </div>
+
+    <!-- Advanced Excel -->
+    <div class="topic-category">
+      <div class="cat-header" onclick="toggleCat('excel')">
+        <span>📗 Advanced Excel</span>
+        <svg class="cat-arrow" id="arr-excel" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cat-items" id="cat-excel">
+        <button class="topic-btn" onclick="setTopic('Explain VLOOKUP, XLOOKUP, INDEX-MATCH in Excel with real examples')">VLOOKUP &amp; XLOOKUP</button>
+        <button class="topic-btn" onclick="setTopic('How to create Pivot Tables and Pivot Charts in Excel? Complete guide')">Pivot Tables</button>
+        <button class="topic-btn" onclick="setTopic('Advanced Excel formulas: SUMIFS, COUNTIFS, ARRAYFORMULA with examples')">Advanced Formulas</button>
+        <button class="topic-btn" onclick="setTopic('How to use Excel Macros and VBA for automation? Beginner to advanced')">Macros &amp; VBA</button>
+        <button class="topic-btn" onclick="setTopic('How to do data analysis and forecasting in Excel using What-If Analysis?')">What-If Analysis</button>
+        <button class="topic-btn" onclick="setTopic('Excel Power Query: importing, transforming and combining data from multiple sources')">Power Query in Excel</button>
+      </div>
+    </div>
+
+    <!-- AI -->
+    <div class="topic-category">
+      <div class="cat-header" onclick="toggleCat('ai')">
+        <span>🤖 AI &amp; LLMs</span>
+        <svg class="cat-arrow" id="arr-ai" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cat-items" id="cat-ai">
+        <button class="topic-btn" onclick="setTopic('How do Large Language Models (LLMs) work? Explain GPT, BERT, and transformers in detail')">How LLMs Work</button>
+        <button class="topic-btn" onclick="setTopic('What is prompt engineering? Show best techniques for better AI responses')">Prompt Engineering</button>
+        <button class="topic-btn" onclick="setTopic('Explain RAG (Retrieval-Augmented Generation) architecture with a Python example')">RAG Architecture</button>
+        <button class="topic-btn" onclick="setTopic('How to fine-tune an LLM on custom data? Step-by-step with Hugging Face')">Fine-Tuning LLMs</button>
+        <button class="topic-btn" onclick="setTopic('What is LangChain and how to build AI agents with it? Python tutorial')">LangChain &amp; Agents</button>
+        <button class="topic-btn" onclick="setTopic('What is generative AI? Explain GANs, VAEs, and diffusion models with examples')">Generative AI</button>
+      </div>
+    </div>
+
+    <!-- R Programming -->
+    <div class="topic-category">
+      <div class="cat-header" onclick="toggleCat('r')">
+        <span>📐 R Programming</span>
+        <svg class="cat-arrow" id="arr-r" width="12" height="12" viewBox="0 0 24 24" fill="none"><path d="M6 9l6 6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div class="cat-items" id="cat-r">
+        <button class="topic-btn" onclick="setTopic('R basics for data science: vectors, data frames, lists and control flow with examples')">R Basics</button>
+        <button class="topic-btn" onclick="setTopic('Data manipulation in R using dplyr: filter, select, mutate, group_by, summarise')">dplyr &amp; tidyr</button>
+        <button class="topic-btn" onclick="setTopic('How to create beautiful data visualizations in R using ggplot2? Complete guide')">ggplot2 Visualization</button>
+        <button class="topic-btn" onclick="setTopic('Statistical analysis in R: t-tests, ANOVA, linear regression with examples')">Statistical Analysis</button>
+        <button class="topic-btn" onclick="setTopic('Machine learning in R using caret and tidymodels packages with examples')">ML with caret</button>
+        <button class="topic-btn" onclick="setTopic('How to build interactive dashboards in R using Shiny? Step-by-step tutorial')">Shiny Dashboards</button>
       </div>
     </div>
   </div>
@@ -204,10 +268,10 @@
             <div class="q-card-glow"></div>
             <span class="q-emoji">📖</span>
             <div class="q-title">Learn Theory</div>
-            <div class="q-desc">ML algorithms, statistics & math concepts</div>
+            <div class="q-desc">ML algorithms, statistics &amp; math concepts</div>
             <span class="q-arrow">→</span>
           </button>
-          <button class="q-card c3" onclick="setTopic('Debug this code:\nimport pandas as pd\ndf = pd.read_csv(\"data.csv\")\nprint(df.groupby(\"category\").mean())')">
+          <button class="q-card c3" onclick="setTopic('Debug this code:&#10;import pandas as pd&#10;df = pd.read_csv(&quot;data.csv&quot;)&#10;print(df.groupby(&quot;category&quot;).mean())')">
             <div class="q-card-glow"></div>
             <span class="q-emoji">🐛</span>
             <div class="q-title">Debug Code</div>
@@ -218,14 +282,14 @@
             <div class="q-card-glow"></div>
             <span class="q-emoji">🗺️</span>
             <div class="q-title">Learning Path</div>
-            <div class="q-desc">Roadmaps, resources & career guidance</div>
+            <div class="q-desc">Roadmaps, resources &amp; career guidance</div>
             <span class="q-arrow">→</span>
           </button>
           <button class="q-card c5" onclick="setTopic('What are the top 20 data science interview questions with detailed answers?')">
             <div class="q-card-glow"></div>
             <span class="q-emoji">🎯</span>
             <div class="q-title">Interview Prep</div>
-            <div class="q-desc">Top DS/ML interview Q&A with model answers</div>
+            <div class="q-desc">Top DS/ML interview Q&amp;A with model answers</div>
             <span class="q-arrow">→</span>
           </button>
           <button class="q-card c6" onclick="setTopic('Walk me through a complete end-to-end ML project: data to deployment with Python')">
@@ -274,5 +338,6 @@
 </div>
 
 <script src="app.js"></script>
+<script src="ui.js"></script>
 </body>
 </html>
