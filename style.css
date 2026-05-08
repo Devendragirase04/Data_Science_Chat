@@ -309,8 +309,11 @@ html, body {
    Messages – glass bubbles with subtle fade‑in
    --------------------------- */
 .messages-container { padding: 28px 24px; max-width: 820px; margin: 0 auto; }
-.message { display: flex; gap: 14px; margin-bottom: 28px; animation: msgIn .3s ease; }
-@keyframes msgIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+.message { display: flex; gap: 14px; margin-bottom: 28px; animation: msgIn 0.6s cubic-bezier(0.16, 1, 0.3, 1) backwards; }
+@keyframes msgIn { 
+  from { opacity: 0; transform: translateY(15px) scale(0.97); filter: blur(5px); } 
+  to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } 
+}
 .msg-avatar {
   width: 34px; height: 34px; border-radius: 10px; flex-shrink: 0;
   display: flex; align-items: center; justify-content: center; font-size: 14px;
@@ -319,8 +322,14 @@ html, body {
 .msg-avatar.ai { background: linear-gradient(135deg, rgba(0,212,168,.18), rgba(79,142,255,.18)); border: 1px solid rgba(0,212,168,.2); color: var(--a3); }
 .msg-body { flex: 1; padding-top: 2px; }
 .msg-label { font-size: 11.5px; font-weight: 700; margin-bottom: 6px; font-family: var(--head); letter-spacing: .02em; }
-.message.user .msg-label { color: var(--a1); }
-.message.ai .msg-label { color: var(--a3); }
+.message.user .msg-label { color: var(--text2); }
+.message.ai .msg-label { 
+  background: linear-gradient(90deg, var(--a3), var(--a1)); 
+  -webkit-background-clip: text; 
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 12px rgba(0,212,168,0.3);
+}
 .msg-text { color: var(--text); line-height: 1.8; font-size: 14.5px; }
 .msg-text p { margin-bottom: 12px; }
 .msg-text p:last-child { margin-bottom: 0; }
