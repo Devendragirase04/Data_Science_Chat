@@ -39,6 +39,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // Observe all quick-card elements for fade-in
   document.querySelectorAll('.q-card').forEach(card => fadeObserver.observe(card));
 
+  // ===== MOUSE TRACKING GLOW FOR CARDS =====
+  document.getElementById('welcomeScreen').addEventListener('mousemove', (e) => {
+    for (const card of document.querySelectorAll('.q-card')) {
+      const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+      card.style.setProperty('--mouse-x', `${x}px`);
+      card.style.setProperty('--mouse-y', `${y}px`);
+    }
+  });
+
   // Add ripple-btn class AND attach ripple listener to interactive buttons
   document.querySelectorAll('.new-chat-btn, .topic-btn').forEach(btn => {
     btn.classList.add('ripple-btn');
