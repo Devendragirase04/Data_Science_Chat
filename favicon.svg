@@ -1,9 +1,26 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
   <defs>
-    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#00d4a8" />
-      <stop offset="100%" stop-color="#4f8eff" />
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e1b4b" />
+    </linearGradient>
+    <linearGradient id="accent" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="100%" stop-color="#3b82f6" />
     </linearGradient>
   </defs>
-  <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="url(#grad)" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Background -->
+  <rect width="256" height="256" rx="50" fill="url(#bg)"/>
+  
+  <!-- Outer D Curve -->
+  <path d="M 80 60 L 130 60 C 180 60 200 90 200 128 C 200 166 180 196 130 196 L 80 196 Z" fill="none" stroke="url(#accent)" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Inner Data Connection -->
+  <circle cx="110" cy="128" r="16" fill="#8b5cf6"/>
+  <circle cx="155" cy="128" r="12" fill="#d946ef"/>
+  <line x1="110" y1="128" x2="155" y2="128" stroke="#8b5cf6" stroke-width="8"/>
+  
+  <!-- Corner Nodes -->
+  <circle cx="80" cy="60" r="14" fill="#06b6d4"/>
+  <circle cx="80" cy="196" r="14" fill="#3b82f6"/>
 </svg>
