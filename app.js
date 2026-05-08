@@ -223,6 +223,9 @@ function renderMarkdown(text) {
   });
   text = text.replace(/^---$/gm, '<hr>');
 
+  text = text.replace(/\[(.+?)\]\((https?:\/\/[^\s\)]+)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  text = text.replace(/(?<!["=])(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer">$1</a>');
+
   const lines = text.split('\n');
   const out = [];
   let i = 0;
@@ -251,3 +254,27 @@ function renderMarkdown(text) {
 
   return text;
 }
+
+// Re-run KaTeX on newly added messages
+function applyMath(element) {
+  if (window.renderMathInElement) {
+    window.renderMathInElement(element, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false},
+        {left: '\\[', right: '\\]', display: true}
+      ],
+      throwOnError: false
+    });
+  }
+}
+
+// Update appendMessage to call applyMath
+const originalAppendMessage = appendMessage;
+appendMessage = function(role, text) {
+  originalAppendMessage(role, text);
+  const container = document.getElementById('messagesContainer');
+  const lastMsg = container.lastElementChild;
+  if (lastMsg) applyMath(lastMsg);
+};

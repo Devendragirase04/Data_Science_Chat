@@ -366,10 +366,25 @@ html, body {
 .msg-text h1 { font-size: 20px; }
 .msg-text h2 { font-size: 17px; color: var(--text); }
 .msg-text h3 { font-size: 15px; color: var(--a1); }
-.msg-text strong { font-weight: 600; color: var(--text); }
+.msg-text strong { font-weight: 600; color: #fff; }
 .msg-text em { color: var(--text2); font-style: italic; }
-.msg-text a { color: var(--a1); text-decoration: underline dotted; }
+.msg-text a { 
+  color: var(--a1); 
+  text-decoration: none; 
+  font-weight: 600;
+  border-bottom: 1px solid rgba(79,142,255,0.3);
+  transition: all 0.2s;
+}
+.msg-text a:hover {
+  color: var(--a3);
+  border-bottom-color: var(--a3);
+  background: rgba(0,212,168,0.05);
+}
 .msg-text hr { border: none; border-top: 1px solid var(--border); margin: 16px 0; }
+
+/* KaTeX Math Styling */
+.katex-display { margin: 1em 0; overflow-x: auto; overflow-y: hidden; padding: 4px 0; }
+.katex { font-size: 1.1em; color: var(--text); }
 /* Inline code */
 .msg-text code:not(pre code) {
   font-family: var(--mono); font-size: 12.5px; background: rgba(79,142,255,.1); border-radius: 4px; padding: 2px 7px; color: var(--a2);
