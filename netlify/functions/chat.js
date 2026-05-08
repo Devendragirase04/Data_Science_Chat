@@ -8,7 +8,7 @@ exports.handler = async (event, context) => {
 
   try {
     const { messages } = JSON.parse(event.body);
-    const API_KEY = 'AIzaSyDC47Nx-o1idFX7mNRhfQrNmfj81IE0S54'; // Hardcoded here for easiest deployment
+    const API_KEY = process.env.GEMINI_API_KEY;
 
     const SYSTEM = `You are DataScience By Dev — an expert Data Science and Programming tutor. You specialise in:
 - Machine learning, deep learning, NLP, computer vision
