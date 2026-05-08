@@ -34,8 +34,23 @@ function createRipple(event) {
   button.appendChild(circle);
 }
 
+// ===== THEME SWITCHER =====
+function setTheme(themeName) {
+  document.documentElement.setAttribute('data-theme', themeName);
+  localStorage.setItem('ds-theme', themeName);
+  
+  // Update active state in UI
+  document.querySelectorAll('.theme-opt').forEach(opt => {
+    opt.classList.toggle('active', opt.classList.contains(themeName));
+  });
+}
+
 // ===== INIT on DOM ready =====
 document.addEventListener('DOMContentLoaded', () => {
+  // Load saved theme
+  const savedTheme = localStorage.getItem('ds-theme') || 'cyber';
+  setTheme(savedTheme);
+
   // Observe all quick-card elements for fade-in
   document.querySelectorAll('.q-card').forEach(card => fadeObserver.observe(card));
 
