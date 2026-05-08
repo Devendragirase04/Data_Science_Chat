@@ -1,0 +1,9 @@
+{
+  "name": "datascience-by-dev",
+  "version": "1.0.0",
+  "description": "DataScience By Dev AI Platform",
+  "main": "app.js",
+  "dependencies": {
+    "node-fetch": "^2.6.7"
+  }
+}
