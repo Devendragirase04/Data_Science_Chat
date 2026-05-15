@@ -113,6 +113,73 @@
   --text3: #94a3b8;
 }
 
+/* ---------- New Theme Definitions ---------- */
+[data-theme="luxury"] {
+  --bg: #0a0a0a;
+  --bg2: #141414;
+  --bg3: #1e1e1e;
+  --surface: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --border: rgba(255,215,0,0.12);
+  --border2: rgba(255,215,0,0.25);
+  --a1: #ffd700; /* Gold */
+  --a2: #ffb800;
+  --a3: #ff8c00; /* Dark Orange */
+  --a4: #ff6f61;
+  --a5: #ff4500;
+  --text: #f5f5f5;
+  --text2: #d4d4d4;
+  --bg-image: url('assets/luxury_modern_bg.png');
+}
+
+[data-theme="vintage"] {
+  --bg: #2b1d0e;
+  --bg2: #3e2b1a;
+  --bg3: #504236;
+  --surface: rgba(255,255,255,0.03);
+  --glass: rgba(255,255,255,0.02);
+  --border: rgba(165,124,78,0.12);
+  --border2: rgba(165,124,78,0.25);
+  --a1: #a57c4e; /* Brown */
+  --a2: #c4976c;
+  --a3: #d3b18c;
+  --a4: #e4c8a8;
+  --a5: #f2e3d5;
+  --text: #eae2d9;
+  --text2: #cbb99c;
+  --bg-image: url('assets/vintage_bg.png');
+}
+
+[data-theme="modern"] {
+  --bg: #111111;
+  --bg2: #1a1a1a;
+  --bg3: #222222;
+  --surface: rgba(255,255,255,0.04);
+  --glass: rgba(255,255,255,0.03);
+  --border: rgba(255,255,255,0.12);
+  --border2: rgba(255,255,255,0.25);
+  --a1: #ffdf00; /* Gold accent */
+  --a2: #00d4ff; /* Cyan */
+  --a3: #ff00c8; /* Magenta */
+  --a4: #ff6600; /* Orange */
+  --a5: #66ff66; /* Green */
+  --text: #e0e0e0;
+  --text2: #b0b0b0;
+  --bg-image: url('assets/modern_luxury_bg.png');
+}
+
+/* ---------- Background Image Layer ---------- */
+.bg-image {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  background-image: var(--bg-image);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: brightness(0.6) contrast(1.2);
+}
+
 
 html, body {
   height: 100%;
@@ -640,6 +707,9 @@ html, body {
 .theme-opt.emerald { background: #10b981; }
 .theme-opt.amethyst { background: #a855f7; }
 .theme-opt.light { background: #f8fafc; border-color: #e2e8f0; }
+.theme-opt.luxury { background: #ffd700; }
+.theme-opt.vintage { background: #a57c4e; }
+.theme-opt.modern { background: #ffdf00; }
 
 .theme-opt:hover { transform: scale(1.2); }
 .theme-opt.active { border-color: #fff; transform: scale(1.1); box-shadow: 0 0 12px var(--a1); }
